@@ -1,24 +1,52 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+
+import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
+
+import styles from "./App.module.scss";
+import { ClickNotificationChallenge } from "./components/ClickNotificationChallenge/ClickNotificationChallenge";
+import { FizzBuzzChallenge } from "./components/FizzBuzzChallenge/FizzBuzzChallenge";
+import { FlagsChallenge } from "./components/FlagsChallenge/FlagsChallenge";
+import { PalindromeChallenge } from "./components/PalindromeChallenge/PalindromeChallenge";
+
+import { Home } from "./components/Home/Home";
+import { DataTransformationChallenge } from "./components/DataTransformationChallenge/DataTransformationChallenge";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className={styles.App}>
+      <h1>React App Playground</h1>
+      <Router>
+        <nav>
+          <Link to="/">Home</Link>
+          <Link to="/palindrome">JS: Palindrome</Link>
+          <Link to="/data-transformation">JS: Data Transformation</Link>
+          <Link to="/react-click-notification">React: Notification</Link>
+          <Link to="/react-fizzbuzz">React: FizzBuzz</Link>
+          <Link to="/flags">CSS: Flags</Link>
+        </nav>
+        <div className="router-outlet">
+          <Switch>
+            <Route path="/palindrome">
+              <PalindromeChallenge />
+            </Route>
+            <Route path="/flags">
+              <FlagsChallenge />
+            </Route>
+            <Route path="/react-click-notification">
+              <ClickNotificationChallenge />
+            </Route>
+            <Route path="/react-fizzbuzz">
+              <FizzBuzzChallenge />
+            </Route>
+            <Route path="/data-transformation">
+              <DataTransformationChallenge />
+            </Route>
+            <Route path="/">
+              <Home />
+            </Route>
+          </Switch>
+        </div>
+      </Router>
     </div>
   );
 }

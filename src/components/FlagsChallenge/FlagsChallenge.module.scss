@@ -1,0 +1,31 @@
+.FlagsChallenge {
+  h2 {
+    color: green;
+  }
+
+  .flagContainer1 {
+    width: 19em;
+    height: 12em;
+    border: 1px dotted black;
+    display: inline-block;
+    margin: 1rem;
+  }
+
+  .flagExample {
+    max-width: 100px;
+    max-height: 100px;
+    margin: 1em 3em;
+  }
+
+  .FlagOfJapan {
+    background-color: lightblue;
+  }
+
+  .FlagOfEngland {
+    background-color: lightyellow;
+  }
+
+  .FlagOfUAE {
+    background-color: lightgreen;
+  }
+}

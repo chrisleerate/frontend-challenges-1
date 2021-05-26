@@ -1,0 +1,23 @@
+.PalindromeChallenge {
+  h2 {
+    color: rgba(179, 0, 255, 0.673);
+  }
+}
+
+.IsPalindromeCheck {
+  margin: 1rem;
+  display: flex;
+  align-items: center;
+
+  .indicator {
+    margin-right: 0.5rem;
+    padding: 0.5rem;
+    border-radius: 50%;
+    &.pass {
+      background-color: green;
+    }
+    &.fail {
+      background-color: red;
+    }
+  }
+}
