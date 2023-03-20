@@ -10,6 +10,7 @@ import { PalindromeChallenge } from "./components/PalindromeChallenge/Palindrome
 
 import { Home } from "./components/Home/Home";
 import { DataTransformationChallenge } from "./components/DataTransformationChallenge/DataTransformationChallenge";
+import { CodingChallenges } from "./components/CodingChallenges/CodingChallenges";
 
 function App() {
   return (
@@ -23,6 +24,7 @@ function App() {
           <Link to="/react-click-notification">React: Notification</Link>
           <Link to="/react-fizzbuzz">React: FizzBuzz</Link>
           <Link to="/flags">CSS: Flags</Link>
+          <Link to="/coding-challenges">Coding Challenges</Link>
         </nav>
         <div className="router-outlet">
           <Switch>
@@ -40,6 +42,9 @@ function App() {
             </Route>
             <Route path="/data-transformation">
               <DataTransformationChallenge />
+            </Route>
+            <Route path="/coding-challenges">
+              <CodingChallenges />
             </Route>
             <Route path="/">
               <Home />
