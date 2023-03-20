@@ -11,7 +11,7 @@ let myVariable;
   What would be the result of 2 + 5 + "3"?
 */
 
-// answer here
+let concatResult = 2 + 5 + "3"; // answer here
 
 /*
   ************************************************************

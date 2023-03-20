@@ -1,16 +1,34 @@
 import React from "react";
 import styles from "./CodingChallenges.module.scss";
 
-export const MergeSortedArrays = () => {
-  const mergeSortedArrays = null; // TODO
-
-  let mergeSortedArraysOutput: any = undefined;
+const runTestCase = (name, fn, args) => {
+  let testCaseOutput;
   try {
-    mergeSortedArraysOutput = mergeSortedArrays([5, 6, 7], [4, 5, 9]);
+    if (!fn) {
+      testCaseOutput = "function is not defined yet!";
+    } else {
+      testCaseOutput = fn.apply(undefined, args);
+    }
   } catch (e) {
     console.error(e);
-    mergeSortedArraysOutput = `ERROR: ` + e.message;
+    testCaseOutput = `ERROR: ` + e.message;
   }
+  return `${name}(${args.map(JSON.stringify).join(", ")}): ${testCaseOutput}`;
+};
+
+export const MergeSortedArrays = () => {
+
+  // YOUR CODE HERE
+  const mergeSortedArrays = null;
+
+  let mergeSortedArraysOutput = runTestCase(
+    `mergeSortedArrays`,
+    mergeSortedArrays,
+    [
+      [5, 6, 7],
+      [4, 5, 9],
+    ]
+  );
 
   return (
     <>
@@ -33,6 +51,76 @@ export const MergeSortedArrays = () => {
   );
 };
 
+export const StringScramble = () => {
+  
+  // YOUR CODE HERE
+  const stringScramble = null
+
+    const charMap = { ...origCharMap };
+
+    const str2Letters = str2.split("");
+    for (const letter of str2Letters) {
+      if (!charMap.hasOwnProperty(letter)) {
+        charMap[letter] = 0;
+      }
+      charMap[letter]--;
+    }
+
+    const successfullyScrambled = Object.values(charMap).every((it) => it >= 0);
+
+    // console.log(`str1`, str1, `str2`, str2, `origCharMap`, JSON.stringify(origCharMap, null, 2), `charMap`, JSON.stringify(charMap, null, 2), `successfullyScrambled`, successfullyScrambled);
+
+    // code goes here
+    return successfullyScrambled;
+  }; // TODO
+
+  let stringScrambleOutput1 = runTestCase(`stringScramble`, stringScramble, [
+    "balmy",
+    "lamb",
+  ]);
+
+  let stringScrambleOutput2 = runTestCase(`stringScramble`, stringScramble, [
+    "shore",
+    "horses",
+  ]);
+
+  let stringScrambleOutput3 = runTestCase(`stringScramble`, stringScramble, [
+    "tacos de pollo",
+    "loco",
+  ]);
+
+  let stringScrambleOutput4 = runTestCase(`stringScramble`, stringScramble, [
+    "tostada",
+    "toasty",
+  ]);
+
+  return (
+    <>
+      <div className={styles.largeSpacer}>
+        <h2>String Scramble</h2>
+        <div>
+          Create a function named "stringScramble" which takes 2 strings as
+          arguments.
+          <br />
+          Return a boolean representing whether the first string can be
+          rearranged into the second string.
+        </div>
+        <div className={styles.smallSpacer}>
+          <b>Example:</b>
+          <pre>stringScramble([5,6,7], [4,5,9]) =&gt; [4,5,5,6,7,9]</pre>
+        </div>
+        <div className={styles.smallSpacer}>
+          <b>Your Solution:</b>
+          <pre>{stringScrambleOutput1}</pre>
+          <pre>{stringScrambleOutput2}</pre>
+          <pre>{stringScrambleOutput3}</pre>
+          <pre>{stringScrambleOutput4}</pre>
+        </div>
+      </div>
+    </>
+  );
+};
+
 export const CodingChallenges = () => {
   return (
     <div>
@@ -42,6 +130,7 @@ export const CodingChallenges = () => {
       </div>
       <h3>Implementations</h3>
       <MergeSortedArrays />
+      <StringScramble />
     </div>
   );
 };
