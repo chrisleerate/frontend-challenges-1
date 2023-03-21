@@ -27,6 +27,10 @@ export const FlagsChallenge = () => {
           <li>Implement the specified flags.</li>
           <li>Use modern and clean CSS layout methods where possible.</li>
           <li>
+            You may either use <span className="font-bold">Tailwind</span> or{" "}
+            <span className={styles.cssModules}>CSS modules</span>.
+          </li>
+          <li>
             The colors or exact proportions of each flag can be approximated -
             no need to make them perfect.
           </li>

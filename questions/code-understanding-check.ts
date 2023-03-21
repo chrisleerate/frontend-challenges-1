@@ -1,5 +1,12 @@
 /*
   ************************************************************
+  RAPID FIRE QUESTIONS
+  Answer these as quickly as possible and let's move on to the next section!
+  ************************************************************
+*/
+
+/*
+  ************************************************************
   How would you check if the following variable is a boolean?
 */
 
