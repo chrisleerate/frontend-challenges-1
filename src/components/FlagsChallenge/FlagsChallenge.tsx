@@ -1,20 +1,25 @@
 /* eslint-disable jsx-a11y/alt-text */
 import React from "react";
+import clsx from "clsx";
 import styles from "./FlagsChallenge.module.scss";
 import flagEnglandImg from "./flag-england.png";
 import flagUAEImg from "./flag-uae.png";
 import flagJapanImg from "./flag-japan.png";
 
 export const FlagOfJapan = () => {
-  return <div className={styles.FlagOfJapan}>TODO: Flag of Japan</div>;
+  return (
+    <div className={clsx(styles.FlagOfJapan, "")}>TODO: Flag of Japan</div>
+  );
 };
 
 export const FlagOfEngland = () => {
-  return <div className={styles.FlagOfEngland}>TODO: Flag of England</div>;
+  return (
+    <div className={clsx(styles.FlagOfEngland, "")}>TODO: Flag of England</div>
+  );
 };
 
 export const FlagOfUAE = () => {
-  return <div className={styles.FlagOfUAE}>TODO: Flag of UAE</div>;
+  return <div className={clsx(styles.FlagOfUAE, "")}>TODO: Flag of UAE</div>;
 };
 
 export const FlagsChallenge = () => {

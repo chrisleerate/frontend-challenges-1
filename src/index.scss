@@ -1,4 +1,6 @@
-@import url("https://cdn.tailwindcss.com/3.2.6");
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
 body {
   margin: 0;
