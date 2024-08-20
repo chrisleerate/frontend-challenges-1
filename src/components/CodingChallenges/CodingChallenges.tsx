@@ -29,7 +29,7 @@ export const MergeSortedArrays = () => {
       [4, 5, 6],
       [1, 2, 3],
     ],
-    "[1, 2, 3, 4, 5, 6]"
+    "[1, 2, 3, 4, 5, 6]",
   );
 
   let mergeSortedArraysOutput2 = runTestCase(
@@ -39,7 +39,7 @@ export const MergeSortedArrays = () => {
       [5, 6, 7],
       [4, 5, 9],
     ],
-    "[4, 5, 6, 7, 8, 9]"
+    "[4, 5, 6, 7, 8, 9]",
   );
 
   let mergeSortedArraysOutput3 = runTestCase(
@@ -49,7 +49,7 @@ export const MergeSortedArrays = () => {
       [1, 1, 1, 9],
       [2, 3, 4, 5, 6, 7],
     ],
-    "[1, 1, 1, 2, 3, 4, 5, 6, 7, 9]"
+    "[1, 1, 1, 2, 3, 4, 5, 6, 7, 9]",
   );
 
   return (

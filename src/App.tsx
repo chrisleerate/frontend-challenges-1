@@ -1,6 +1,6 @@
 import React from "react";
 
-import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
+import { BrowserRouter as Router, Route, Link, Routes } from "react-router-dom";
 
 import styles from "./App.module.scss";
 import { ClickNotificationChallenge } from "./components/ClickNotificationChallenge/ClickNotificationChallenge";
@@ -27,29 +27,21 @@ function App() {
           <Link to="/coding-challenges">Coding Challenges</Link>
         </nav>
         <div className="router-outlet">
-          <Switch>
-            <Route path="/palindrome">
-              <PalindromeChallenge />
-            </Route>
-            <Route path="/flags">
-              <FlagsChallenge />
-            </Route>
-            <Route path="/react-click-notification">
-              <ClickNotificationChallenge />
-            </Route>
-            <Route path="/react-fizzbuzz">
-              <FizzBuzzChallenge />
-            </Route>
-            <Route path="/data-transformation">
-              <DataTransformationChallenge />
-            </Route>
-            <Route path="/coding-challenges">
-              <CodingChallenges />
-            </Route>
-            <Route path="/">
-              <Home />
-            </Route>
-          </Switch>
+          <Routes>
+            <Route path="/palindrome" element={<PalindromeChallenge />} />
+            <Route path="/flags" element={<FlagsChallenge />} />
+            <Route
+              path="/react-click-notification"
+              element={<ClickNotificationChallenge />}
+            />
+            <Route path="/react-fizzbuzz" element={<FizzBuzzChallenge />} />
+            <Route
+              path="/data-transformation"
+              element={<DataTransformationChallenge />}
+            />
+            <Route path="/coding-challenges" element={<CodingChallenges />} />
+            <Route path="/" element={<Home />} />
+          </Routes>
         </div>
       </Router>
     </div>
