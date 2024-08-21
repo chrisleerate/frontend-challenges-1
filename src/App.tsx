@@ -11,6 +11,7 @@ import { PalindromeChallenge } from "./components/PalindromeChallenge/Palindrome
 import { Home } from "./components/Home/Home";
 import { DataTransformationChallenge } from "./components/DataTransformationChallenge/DataTransformationChallenge";
 import { CodingChallenges } from "./components/CodingChallenges/CodingChallenges";
+import { PastaApp } from "./components/Pasta/PastaApp";
 
 function App() {
   return (
@@ -25,6 +26,7 @@ function App() {
           <Link to="/react-fizzbuzz">React: FizzBuzz</Link>
           <Link to="/flags">CSS: Flags</Link>
           <Link to="/coding-challenges">Coding Challenges</Link>
+          <Link to="/pasta">Pasta</Link>
         </nav>
         <div className="router-outlet">
           <Routes>
@@ -40,6 +42,7 @@ function App() {
               element={<DataTransformationChallenge />}
             />
             <Route path="/coding-challenges" element={<CodingChallenges />} />
+            <Route path="/pasta/*" element={<PastaApp />} />
             <Route path="/" element={<Home />} />
           </Routes>
         </div>
