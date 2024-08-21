@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-export const Ravioli: React.FC = () => {
+export const Linguine: React.FC = () => {
   return (
     <div>
       <header>
@@ -26,9 +26,8 @@ export const Ravioli: React.FC = () => {
 
       <main className="my-4">
         <p>
-          Ravioli are a type of pasta comprising a filling enveloped in thin
-          pasta dough. They are usually square, though other forms are also
-          popular.
+          Linguine! These long, flat noodles are slightly thicker than
+          spaghetti.
         </p>
       </main>
 
