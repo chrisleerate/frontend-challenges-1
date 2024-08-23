@@ -26,7 +26,7 @@ export const ClickNotificationChallenge = () => {
             If the user clicks the button then it should pop up a notification
             saying that the button was clicked.
           </li>
-          <li>The notification should disappear after 3 seconds.</li>
+          <li>The notification should disappear after 1 second.</li>
         </ul>
       </div>
       <h3>Implementation</h3>
